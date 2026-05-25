@@ -88,7 +88,7 @@ def button_clicked(value):
                 elif operator == "+":
                     result = A_num + B_num
 
-                label["text"] = remove_zero_decimal(result)
+                label["text"] = str(remove_zero_decimal(result))
                 clear_all()
         elif value in "÷×-+":
             if operator is None:
@@ -105,10 +105,10 @@ def button_clicked(value):
 
         elif value == "+/-":
             result = float(label["text"]) * -1
-            label["text"] = remove_zero_decimal(result)
+            label["text"] = str(remove_zero_decimal(result))
         elif value == "%":
             value = float(label["text"]) / 100
-            label["text"] = remove_zero_decimal(value)
+            label["text"] = str(remove_zero_decimal(result))
             
     else:
         if value == ".":
@@ -123,7 +123,7 @@ def button_clicked(value):
             result = float(label["text"])
             if result >= 0:
                 result = result ** 0.5
-                label["text"] = remove_zero_decimal(result)
+                label["text"] = str(remove_zero_decimal(result))
             else:
                 label["text"] = "Error"
 
